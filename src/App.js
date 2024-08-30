@@ -1,7 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import "./App.css";
 import Account from "./components/Account";
 import Calculators from './components/Calculators';
@@ -50,7 +50,6 @@ const MainContent = () => {
         <Route path="/reports" element={<Reports />} />
         <Route path="/returns" element={<Returns />} />
         <Route path="/shipping" element={<Shipping />} />
-        <Route path="*" element={<Navigate to="/dashboard" />} />
       </Routes>
     </div>
   );
