@@ -58,7 +58,7 @@ const MainContent = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="app">
         <div className="container-fluid">
           <div className='row'>
