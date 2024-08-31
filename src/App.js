@@ -39,7 +39,7 @@ const MainContent = () => {
     <div className="col-10 main-section bg-secondary-subtle p-2">
       <div className='m-2'><span className='section-head'>{sectionTitle}</span></div>
       <Routes>
-        <Route exact path="*" element={<Navigate to="/dashboard" replace />} />
+        <Route exact path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/account" element={<Account />} />
         <Route path="/calculator" element={<Calculators />} />
@@ -58,7 +58,7 @@ const MainContent = () => {
 
 const App = () => {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <div className="app">
         <div className="container-fluid">
           <div className='row'>
