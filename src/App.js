@@ -1,7 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import "./App.css";
 import Account from "./components/Account";
 import Calculators from './components/Calculators';
@@ -39,6 +39,7 @@ const MainContent = () => {
     <div className="col-10 main-section bg-secondary-subtle p-2">
       <div className='m-2'><span className='section-head'>{sectionTitle}</span></div>
       <Routes>
+        <Route exact path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/account" element={<Account />} />
         <Route path="/calculator" element={<Calculators />} />
